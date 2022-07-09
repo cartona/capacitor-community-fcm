@@ -7,8 +7,8 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "preinstall": "npm run build",
-    "build": "yarn run clean && tsc",
-    "clean": "rimraf -rf ./dist",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
     "watch": "tsc --watch",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate"
