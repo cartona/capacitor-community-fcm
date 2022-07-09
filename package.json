@@ -6,13 +6,10 @@
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
-    "watch": "tsc --watch",
     "preinstall": "npm run build",
-    "release:patch": "standard-version release --release-as patch",
-    "release:minor": "standard-version release --release-as minor",
-    "release:major": "standard-version release --release-as major",
+    "build": "yarn run clean && tsc",
+    "clean": "rimraf ./dist ./coverage",
+    "watch": "tsc --watch",
     "contributors:add": "all-contributors add",
     "contributors:gen": "all-contributors generate"
   },
@@ -29,11 +26,12 @@
     "typescript": "~4.0.0"
   },
   "files": [
+    "android/",
     "dist/",
     "ios/",
-    "android/",
+    "src/",
     "CapacitorCommunityFcm.podspec",
-    "src/"
+    "tsconfig.json"
   ],
   "keywords": [
     "capacitor",
