@@ -6,23 +6,39 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/l/@capacitor-community/fcm?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/dw/@capacitor-community/fcm?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@capacitor-community/fcm"><img src="https://img.shields.io/npm/v/@capacitor-community/fcm?style=flat-square" /></a>
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-16-orange?style=flat-square" /></a>
+<a href="#contributors"><img src="https://img.shields.io/badge/all%20contributors-21-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </p>
 
+## Sponsors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://intenseloop.com">
+      <img src="https://static.intenseloop.com/assets/logo-512x512.png" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://intenseloop.com">
+      Intenseloop
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Maintainers
 
-| Maintainer     | GitHub                                                  | Social                                      |
-| -------------- | ------------------------------------------------------- | ------------------------------------------- |
-| Stewan Silva   | [stewones](https://github.com/stewones)                 | [@stewones](https://twitter.com/stewones)   |
-| Daniel Pereira | [danielprrazevedo](https://github.com/danielprrazevedo) | [@DandanPrr](https://twitter.com/DandanPrr) |
+| Maintainer   | GitHub                                  | Social                                    |
+| ------------ | --------------------------------------- | ----------------------------------------- |
+| Stewan Silva | [stewones](https://github.com/stewones) | [@stewones](https://twitter.com/stewones) |
 
 ## Notice 🚀
 
@@ -129,7 +145,8 @@ Download the `google-services.json` file and copy it to `android/app/` directory
 
 ## iOS setup
 
-- `sudo gem install cocoapods` _(once a time)_
+- [Install homebrew](https://capacitorjs.com/docs/getting-started/environment-setup#homebrew) _(once)_
+- `brew install cocoapods` _(once a time)_
 - `ionic start my-cap-app --capacitor`
 - `cd my-cap-app`
 - `mkdir www && touch www/index.html`
@@ -164,11 +181,16 @@ If you need to implement opt-in behavior, you can disable the auto initializatio
 - `npx cap sync android` _(always do sync after a plugin install)_
 - `npx cap open android`
 - add `google-services.json` to your `android/app` folder
-- `[extra step]` in android case we need to tell Capacitor to initialise the plugin:
 
 Now you should be set to go. Try to run your client using `ionic cap run android --livereload`.
 
 > Tip: every time you change a native code you may need to clean up the cache (Build > Clean Project | Build > Rebuild Project) and then run the app again.
+
+### Variables
+
+This plugin will use the following project variables (defined in your app's `variables.gradle` file):
+
+- `$firebaseMessagingVersion` version of `com.google.firebase:firebase-messaging` (default: `23.0.5`)
 
 ### Prevent auto initialization
 
@@ -190,30 +212,39 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://twitter.com/stewones"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
-    <td align="center"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Nikolas</b></sub></a><br /><a href="#maintenance-nikoskip" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://lights0123.com/"><img src="https://avatars3.githubusercontent.com/u/3756309?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Ben Schattinger</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=lights0123" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://binary.com.au/"><img src="https://avatars2.githubusercontent.com/u/175909?v=4?s=75" width="75px;" alt=""/><br /><sub><b>James Manners</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=jmannau" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/borodiliz"><img src="https://avatars3.githubusercontent.com/u/2467193?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Borja Rodríguez</b></sub></a><br /><a href="#maintenance-borodiliz" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/Karrlllis"><img src="https://avatars1.githubusercontent.com/u/37330643?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Karrlllis</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=Karrlllis" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/jamesmah"><img src="https://avatars0.githubusercontent.com/u/21981049?v=4?s=75" width="75px;" alt=""/><br /><sub><b>jamesmah</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=jamesmah" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/josh-m-sharpe"><img src="https://avatars3.githubusercontent.com/u/39473?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Josh Sharpe</b></sub></a><br /><a href="#maintenance-josh-m-sharpe" title="Maintenance">🚧</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/msimkunas"><img src="https://avatars.githubusercontent.com/u/9675250?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Mantas Šimkūnas</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/iOlivier"><img src="https://avatars.githubusercontent.com/u/12254953?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Olivier Overstraete</b></sub></a><br /><a href="#maintenance-iOlivier" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://hemang.dev/"><img src="https://avatars.githubusercontent.com/u/13018570?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Hemang Kumar</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=hemangsk" title="Code">💻</a> <a href="#maintenance-hemangsk" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/mesqueeb"><img src="https://avatars.githubusercontent.com/u/3253920?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Luca Ban</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=mesqueeb" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.alexgriffith.me/"><img src="https://avatars.githubusercontent.com/u/5904472?v=4?s=75" width="75px;" alt=""/><br /><sub><b>Alex Griffith</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=halomademeapc" title="Code">💻</a> <a href="#maintenance-halomademeapc" title="Maintenance">🚧</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/bdirito"><img src="https://avatars.githubusercontent.com/u/8117238?v=4?s=75" width="75px;" alt=""/><br /><sub><b>bdirito</b></sub></a><br /><a href="#maintenance-bdirito" title="Maintenance">🚧</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="https://twitter.com/stewones"><img src="https://avatars1.githubusercontent.com/u/719763?v=4?s=75" width="75px;" alt="Stew"/><br /><sub><b>Stew</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=stewones" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/danielprrazevedo"><img src="https://avatars2.githubusercontent.com/u/20153661?v=4?s=75" width="75px;" alt="Daniel Pereira"/><br /><sub><b>Daniel Pereira</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=danielprrazevedo" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="http://priyankpatel.io/"><img src="https://avatars3.githubusercontent.com/u/5585797?v=4?s=75" width="75px;" alt="Priyank Patel"/><br /><sub><b>Priyank Patel</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=priyankpat" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="http://fuubar.wordpress.com/"><img src="https://avatars1.githubusercontent.com/u/1230033?v=4?s=75" width="75px;" alt="Nikolas"/><br /><sub><b>Nikolas</b></sub></a><br /><a href="#maintenance-nikoskip" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://lights0123.com/"><img src="https://avatars3.githubusercontent.com/u/3756309?v=4?s=75" width="75px;" alt="Ben Schattinger"/><br /><sub><b>Ben Schattinger</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=lights0123" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="https://binary.com.au/"><img src="https://avatars2.githubusercontent.com/u/175909?v=4?s=75" width="75px;" alt="James Manners"/><br /><sub><b>James Manners</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=jmannau" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/borodiliz"><img src="https://avatars3.githubusercontent.com/u/2467193?v=4?s=75" width="75px;" alt="Borja Rodríguez"/><br /><sub><b>Borja Rodríguez</b></sub></a><br /><a href="#maintenance-borodiliz" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/Karrlllis"><img src="https://avatars1.githubusercontent.com/u/37330643?v=4?s=75" width="75px;" alt="Karrlllis"/><br /><sub><b>Karrlllis</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=Karrlllis" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/jamesmah"><img src="https://avatars0.githubusercontent.com/u/21981049?v=4?s=75" width="75px;" alt="jamesmah"/><br /><sub><b>jamesmah</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=jamesmah" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/josh-m-sharpe"><img src="https://avatars3.githubusercontent.com/u/39473?v=4?s=75" width="75px;" alt="Josh Sharpe"/><br /><sub><b>Josh Sharpe</b></sub></a><br /><a href="#maintenance-josh-m-sharpe" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/msimkunas"><img src="https://avatars.githubusercontent.com/u/9675250?v=4?s=75" width="75px;" alt="Mantas Šimkūnas"/><br /><sub><b>Mantas Šimkūnas</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Code">💻</a> <a href="https://github.com/capacitor-community/fcm/commits?author=msimkunas" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/iOlivier"><img src="https://avatars.githubusercontent.com/u/12254953?v=4?s=75" width="75px;" alt="Olivier Overstraete"/><br /><sub><b>Olivier Overstraete</b></sub></a><br /><a href="#maintenance-iOlivier" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://hemang.dev/"><img src="https://avatars.githubusercontent.com/u/13018570?v=4?s=75" width="75px;" alt="Hemang Kumar"/><br /><sub><b>Hemang Kumar</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=hemangsk" title="Code">💻</a> <a href="#maintenance-hemangsk" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/mesqueeb"><img src="https://avatars.githubusercontent.com/u/3253920?v=4?s=75" width="75px;" alt="Luca Ban"/><br /><sub><b>Luca Ban</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=mesqueeb" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://www.alexgriffith.me/"><img src="https://avatars.githubusercontent.com/u/5904472?v=4?s=75" width="75px;" alt="Alex Griffith"/><br /><sub><b>Alex Griffith</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=halomademeapc" title="Code">💻</a> <a href="#maintenance-halomademeapc" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/bdirito"><img src="https://avatars.githubusercontent.com/u/8117238?v=4?s=75" width="75px;" alt="bdirito"/><br /><sub><b>bdirito</b></sub></a><br /><a href="#maintenance-bdirito" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/mineminemine"><img src="https://avatars.githubusercontent.com/u/17585549?v=4?s=75" width="75px;" alt="Ryan"/><br /><sub><b>Ryan</b></sub></a><br /><a href="#maintenance-mineminemine" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://github.com/josuelmm"><img src="https://avatars.githubusercontent.com/u/12968781?v=4?s=75" width="75px;" alt="Josué Moreno"/><br /><sub><b>Josué Moreno</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=josuelmm" title="Code">💻</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://marcjulian.de/?ref=github"><img src="https://avatars.githubusercontent.com/u/8985933?v=4?s=75" width="75px;" alt="Marc"/><br /><sub><b>Marc</b></sub></a><br /><a href="#maintenance-marcjulian" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="20%"><a href="https://floriangyger.ch/"><img src="https://avatars.githubusercontent.com/u/1215256?v=4?s=75" width="75px;" alt="Florian Gyger"/><br /><sub><b>Florian Gyger</b></sub></a><br /><a href="https://github.com/capacitor-community/fcm/commits?author=flogy" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="20%"><a href="http://www.jcesarmobile.com/"><img src="https://avatars.githubusercontent.com/u/1637892?v=4?s=75" width="75px;" alt="jcesarmobile"/><br /><sub><b>jcesarmobile</b></sub></a><br /><a href="#question-jcesarmobile" title="Answering Questions">💬</a> <a href="https://github.com/capacitor-community/fcm/commits?author=jcesarmobile" title="Documentation">📖</a> <a href="#maintenance-jcesarmobile" title="Maintenance">🚧</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
