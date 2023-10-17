@@ -78,6 +78,7 @@ npx cap sync
 | `deleteInstance`    | remove local fcm instance completely          | ios/android |
 | `setAutoInit`       | enable the auto initialization of the library | ios/android |
 | `isAutoInitEnabled` | check whether auto initialization is enabled  | ios/android |
+| `deleteToken`       | deletes fcm token                             | ios/android |
 
 ## Usage
 
@@ -104,6 +105,11 @@ FCM.unsubscribeFrom({ topic: "test" })
 FCM.getToken()
   .then((r) => alert(`Token ${r.token}`))
   .catch((err) => console.log(err));
+
+// Deletes FCM token
+FCM.deleteToken()
+  .then(()=> alert('Token deleted!'))
+  .catch((err) => console.log(err))
 
 // Remove FCM instance
 FCM.deleteInstance()
